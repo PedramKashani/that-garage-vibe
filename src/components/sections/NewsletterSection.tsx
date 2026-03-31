@@ -1,60 +1,85 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { Container } from '../ui/Container';
 
-export function NewsletterSection() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+const SENDER_EMBED_SCRIPT_URL =
+  import.meta.env.VITE_SENDER_EMBED_SCRIPT_URL ??
+  'https://cdn.sender.net/accounts_resources/universal.js';
+const SENDER_ACCOUNT_ID = import.meta.env.VITE_SENDER_ACCOUNT_ID;
+const SENDER_FORM_ID = import.meta.env.VITE_SENDER_FORM_ID;
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubmitted(true);
-      setEmail('');
-    }
+declare global {
+  interface Window {
+    sender?: ((id: string) => void) & { q?: unknown[]; l?: number };
+    Sender?: string;
   }
+}
+
+export function NewsletterSection() {
+  const isConfigured = Boolean(SENDER_ACCOUNT_ID || SENDER_FORM_ID);
+
+  useEffect(() => {
+    if (!isConfigured) return;
+
+    const scriptSrc = SENDER_EMBED_SCRIPT_URL;
+
+    // Match Sender's official snippet pattern.
+    window.Sender = 'sender';
+    if (!window.sender) {
+      window.sender = (function (...args: unknown[]) {
+        (window.sender!.q = window.sender!.q || []).push(args);
+      } as ((id: string) => void) & { q?: unknown[]; l?: number });
+      window.sender.l = Date.now();
+    }
+
+    const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${scriptSrc}"]`);
+    if (existingScript) {
+      if (SENDER_ACCOUNT_ID) {
+        window.sender(SENDER_ACCOUNT_ID);
+      }
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = scriptSrc;
+    script.onload = () => {
+      if (SENDER_ACCOUNT_ID) {
+        window.sender?.(SENDER_ACCOUNT_ID);
+      }
+    };
+    document.body.appendChild(script);
+
+    // Queue call immediately too, per snippet behavior.
+    if (SENDER_ACCOUNT_ID) {
+      window.sender(SENDER_ACCOUNT_ID);
+    }
+  }, [isConfigured]);
 
   return (
     <section className="py-16 sm:py-24 md:py-40">
       <Container>
         <div className="mx-auto max-w-xl text-center">
-
           <h2 className="text-3xl font-normal leading-snug text-white/90 md:text-4xl">
             Tap into the collective.
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-neutral-500">
-            Get updates on upcoming events, shows we're hitting,
-            merch drops, and new music.
+            Get updates on upcoming events, shows we're hitting, merch drops, and new music.
           </p>
 
-          {submitted ? (
-            <p className="mt-12 text-xs uppercase tracking-[0.3em] text-neutral-500">
-              You're in.
-            </p>
+          {isConfigured ? (
+            <div className="mt-12">
+              {SENDER_FORM_ID ? (
+                <div className="sender-form-field" data-sender-form-id={SENDER_FORM_ID} />
+              ) : (
+                <div id="sender-embed-anchor" className="min-h-10" />
+              )}
+            </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="mt-12 flex items-center border-b border-neutral-700"
-            >
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                aria-label="Email address"
-                required
-                className="min-w-0 flex-1 bg-transparent py-4 text-base text-white placeholder-neutral-600 outline-none"
-              />
-              <button
-                type="submit"
-                className="shrink-0 py-4 pl-8 text-xs uppercase tracking-[0.18em] text-neutral-500 transition-colors hover:text-white cursor-pointer"
-              >
-                Tap in
-              </button>
-            </form>
+            <p className="mt-12 text-xs tracking-[0.08em] text-neutral-600">
+              Sender embed is not configured yet.
+            </p>
           )}
-
         </div>
       </Container>
     </section>

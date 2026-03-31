@@ -1,7 +1,5 @@
 import { Section } from '../components/ui/Section';
-import { Button } from '../components/ui/Button';
-import { merch } from '../data/merch';
-import { formatPrice } from '../lib/utils';
+import { merchItems } from '../data/merch';
 
 export function MerchPage() {
   return (
@@ -13,57 +11,40 @@ export function MerchPage() {
         Merch
       </h1>
 
-      <div className="grid grid-cols-1 gap-px bg-[#1f1f1f] sm:grid-cols-2 lg:grid-cols-3">
-        {merch.map((item) => (
-          <div key={item.id} className="flex flex-col gap-4 bg-[#0a0a0a] p-8">
-            {/* Placeholder image area */}
-            <div className="aspect-square w-full bg-[#111111] border border-[#1f1f1f]" />
+      <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
+        {merchItems.map((item) => (
+          <article
+            key={item.id}
+            className="group w-full max-w-[420px] border border-[#1f1f1f] bg-[#0a0a0a] p-8 transition duration-300 ease-out hover:scale-[1.02]"
+          >
+            <div className="relative aspect-square w-full overflow-hidden bg-neutral-900">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="h-full w-full object-contain transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-85"
+              />
+            </div>
 
-            <div className="space-y-1">
-              <p className="text-xs uppercase tracking-[0.15em] text-neutral-500">
-                {item.category}
-              </p>
+            <div className="mt-5 space-y-2">
               <h2 className="text-base font-semibold uppercase tracking-tight text-white">
                 {item.name}
               </h2>
-              <p className="text-sm text-neutral-500">
-                {item.description}
-              </p>
+              <p className="text-sm text-neutral-400">{item.price}</p>
             </div>
 
-            {item.sizes && (
-              <div className="flex flex-wrap gap-2">
-                {item.sizes.map((size) => (
-                  <span
-                    key={size}
-                    className="border border-[#2a2a2a] px-2 py-0.5 text-xs uppercase tracking-wider text-neutral-500"
-                  >
-                    {size}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            <div className="flex items-center justify-between pt-2">
-              <span className="text-sm font-medium text-white">
-                {formatPrice(item.price)}
-              </span>
-              <Button
-                variant="outline"
-                size="sm"
-                disabled={!item.inStock}
-                className={!item.inStock ? 'opacity-30 cursor-not-allowed' : ''}
+            <div className="pt-4">
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center border border-white px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-white hover:text-black"
               >
-                {item.inStock ? 'Add to Cart' : 'Sold Out'}
-              </Button>
+                Buy
+              </a>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-
-      <p className="mt-8 text-xs text-neutral-600">
-        * Cart functionality coming soon. Inquire via DM for purchases.
-      </p>
     </Section>
   );
 }

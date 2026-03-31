@@ -27,6 +27,17 @@ const linkMeta: Record<keyof ArtistLinks, { label: string; icon: IconType | Luci
   website:    { label: 'Website',    icon: Globe },
 };
 
+function MetaItem({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <p className="mb-2 text-[10px] uppercase tracking-[0.28em] text-neutral-600">
+        {label}
+      </p>
+      <p className="text-sm font-medium text-neutral-300">{value}</p>
+    </div>
+  );
+}
+
 export function ArtistDetailPage() {
   const { id } = useParams<{ id: string }>();
   const artist = id ? getArtistById(id) : undefined;
@@ -36,49 +47,46 @@ export function ArtistDetailPage() {
   const hasLinks = artist.links && Object.values(artist.links).some(Boolean);
 
   return (
-    <div className="pb-24">
+    <div className="pb-28">
       <Container>
-
-        {/* Back link */}
-        <div className="py-8">
+        <div className="pt-8 pb-10">
           <Link
             to="/artists"
-            className="text-[11px] uppercase tracking-[0.2em] text-neutral-600 transition-colors hover:text-white"
+            className="text-[11px] uppercase tracking-[0.22em] text-neutral-600 transition-colors hover:text-white"
           >
-            ← Artists
+            ← Back to Artists
           </Link>
         </div>
 
-        {/* Main layout: image left, content right on desktop */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-[5fr_6fr] md:gap-16">
-
-          {/* Image */}
+        <div className="grid grid-cols-1 gap-10 xl:grid-cols-[6fr_5fr] xl:gap-16">
           {artist.imageUrl && (
-            <div className="aspect-[3/4] overflow-hidden sm:aspect-auto">
-              <img
-                src={artist.imageUrl}
-                alt={artist.name}
-                className="h-full w-full object-cover object-top"
-                style={{ maxHeight: '80vh' }}
-              />
+            <div className="xl:sticky xl:top-40 xl:self-start">
+              <div className="overflow-hidden border border-neutral-900 bg-neutral-950">
+                <img
+                  src={artist.imageUrl}
+                  alt={artist.name}
+                  className="h-[62vh] w-full object-cover object-top sm:h-[70vh] xl:h-[78vh]"
+                />
+              </div>
             </div>
           )}
 
-          {/* Content */}
-          <div className="flex flex-col justify-end py-4 md:py-10">
+          <div className="min-w-0">
+            <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-neutral-600">
+              Artist Profile
+            </p>
 
-            {artist.genre && (
-              <p className="mb-3 text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                {artist.genre}
-              </p>
-            )}
-
-            <h1 className="mb-8 text-4xl font-bold uppercase leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
+            <h1 className="mb-8 text-5xl font-bold uppercase leading-[0.92] tracking-tight text-white sm:text-6xl md:text-7xl">
               {artist.name}
             </h1>
 
+            <div className="mb-10 grid grid-cols-1 gap-6 border-y border-neutral-900 py-6 sm:grid-cols-2">
+              <MetaItem label="Collective" value="That Garage Vibe" />
+              <MetaItem label="Status" value="Sound Undisclosed" />
+            </div>
+
             {artist.statement && (
-              <div className="mb-8 max-w-sm space-y-4 text-sm leading-relaxed text-neutral-300">
+              <div className="mb-10 max-w-[44ch] space-y-6 text-base leading-relaxed text-neutral-300">
                 {artist.statement.split('\n\n').map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}
@@ -86,13 +94,19 @@ export function ArtistDetailPage() {
             )}
 
             {artist.bio && !artist.statement && (
-              <p className="mb-8 max-w-sm text-sm leading-relaxed text-neutral-400">
+              <p className="mb-10 max-w-[44ch] text-base leading-relaxed text-neutral-400">
                 {artist.bio}
               </p>
             )}
 
+            {!artist.statement && !artist.bio && (
+              <p className="mb-10 max-w-[44ch] text-base leading-relaxed text-neutral-500">
+                More on this artist coming soon.
+              </p>
+            )}
+
             {hasLinks && (
-              <div>
+              <div className="pt-2">
                 <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-neutral-600">
                   Listen / Follow
                 </p>
@@ -108,19 +122,17 @@ export function ArtistDetailPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={label}
-                          className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-800 text-neutral-500 transition-all duration-200 hover:border-neutral-500 hover:text-white"
+                          className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-800 text-neutral-500 transition-all duration-200 hover:border-neutral-500 hover:text-white"
                         >
-                          <Icon size={16} />
+                          <Icon size={17} />
                         </a>
                       );
                     })}
                 </div>
               </div>
             )}
-
           </div>
         </div>
-
       </Container>
     </div>
   );

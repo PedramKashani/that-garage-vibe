@@ -19,7 +19,7 @@ export function Header() {
       <div className="relative mx-auto max-w-[1100px]">
 
         {/* Main pill */}
-        <div className="flex h-[64px] items-center justify-between rounded-full border border-white/[0.07] bg-black/97 px-5 backdrop-blur-md sm:px-7 md:h-[88px] md:px-8">
+        <div className="relative flex h-[64px] items-center justify-center rounded-full border border-white/[0.07] bg-black/97 px-5 backdrop-blur-md sm:px-7 md:h-[88px] md:justify-between md:px-8">
 
           {/* Left: Logo */}
           <NavLink to="/" className="shrink-0" onClick={() => setMenuOpen(false)}>
@@ -56,7 +56,7 @@ export function Header() {
           {/* Right: Location mark — desktop only */}
           <div className="hidden shrink-0 flex-col items-end gap-1 md:flex">
             <span className="text-xs uppercase leading-none tracking-[0.2em] text-neutral-600">
-              Los Angeles
+              Los Angeles / Las Vegas / Utah
             </span>
             <span className="text-[11px] uppercase leading-none tracking-[0.25em] text-neutral-700">
               Est. 2021
@@ -65,7 +65,7 @@ export function Header() {
 
           {/* Right: Hamburger — mobile only */}
           <button
-            className="flex h-8 w-8 items-center justify-center text-neutral-500 transition-colors hover:text-white md:hidden"
+            className="absolute right-5 flex h-8 w-8 items-center justify-center text-neutral-500 transition-colors hover:text-white sm:right-7 md:hidden"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >

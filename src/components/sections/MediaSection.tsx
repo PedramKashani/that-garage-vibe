@@ -6,6 +6,7 @@ import {
   SiSpotify,
   SiBeatport,
   SiFacebook,
+  SiTwitch,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import { Container } from "../ui/Container";
@@ -17,19 +18,30 @@ interface SocialLink {
 }
 
 const socialLinks: SocialLink[] = [
-  { label: "Instagram", href: "https://instagram.com", icon: SiInstagram },
-  { label: "Threads", href: "https://threads.net", icon: SiThreads },
-  { label: "YouTube", href: "https://youtube.com", icon: SiYoutube },
-  { label: "SoundCloud", href: "https://soundcloud.com", icon: SiSoundcloud },
-  { label: "Spotify", href: "https://spotify.com", icon: SiSpotify },
-  { label: "Beatport", href: "https://beatport.com", icon: SiBeatport },
-  { label: "Facebook", href: "https://facebook.com", icon: SiFacebook },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/thegaragevibe/",
+    icon: SiInstagram,
+  },
+  {
+    label: "Twitch",
+    href: "https://m.twitch.tv/thegaragevibe/home",
+    icon: SiTwitch,
+  },
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@thegaragevibe?si=BxNgKBJQSfgR78PB",
+    icon: SiYoutube,
+  },
+  {
+    label: "SoundCloud",
+    href: "https://soundcloud.com/thegaragevibe",
+    icon: SiSoundcloud,
+  },
 ];
 
 const contactItems = [
-  { label: "for demos", email: "demos@thatgaragevibe.com" },
-  { label: "for merch / order questions", email: "support@thatgaragevibe.com" },
-  { label: "for management", email: "management@thatgaragevibe.com" },
+  { label: "for inquiries", email: "inquiry@thegaragevibe.com" },
 ];
 
 export function MediaSection() {
@@ -37,7 +49,6 @@ export function MediaSection() {
     <section className="py-14 sm:py-20 md:py-28">
       <Container className="max-w-none pl-[68px] pr-5 sm:pl-28 sm:pr-8 md:pl-48 md:pr-20">
         <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[200px_1fr_auto] lg:items-center lg:gap-x-10">
-
           {/* Left: Brand logo — fixed 200px column so it never blows out the grid */}
           <div>
             <img
@@ -82,7 +93,6 @@ export function MediaSection() {
               </div>
             ))}
           </div>
-
         </div>
       </Container>
     </section>

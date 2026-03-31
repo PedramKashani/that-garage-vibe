@@ -6,12 +6,11 @@ import { cn } from '../lib/utils';
 interface ArtistCardProps {
   id: string;
   name: string;
-  genre?: string;
   imageUrl?: string;
   className?: string;
 }
 
-function ArtistCard({ id, name, genre, imageUrl, className }: ArtistCardProps) {
+function ArtistCard({ id, name, imageUrl, className }: ArtistCardProps) {
   return (
     <Link
       to={`/artists/${id}`}
@@ -33,11 +32,6 @@ function ArtistCard({ id, name, genre, imageUrl, className }: ArtistCardProps) {
 
       {/* Text */}
       <div className="absolute bottom-0 left-0 right-0 p-6">
-        {genre && (
-          <p className="mb-1 text-[10px] uppercase tracking-[0.25em] text-neutral-400">
-            {genre}
-          </p>
-        )}
         <h2 className="text-xl font-bold uppercase leading-none tracking-tight text-white md:text-2xl">
           {name}
         </h2>

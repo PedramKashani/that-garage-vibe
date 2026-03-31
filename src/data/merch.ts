@@ -1,38 +1,45 @@
-import type { MerchItem } from '../types';
+export type MerchItem = {
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+  href: string;
+};
 
-export const merch: MerchItem[] = [
+export const merchItems: MerchItem[] = [
   {
-    id: 'tgv-tee-001',
-    name: 'TGV Logo Tee',
-    description: 'Heavyweight black tee with embroidered chest logo. Garment dyed, preshrunk.',
-    price: 4500,
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    inStock: true,
-    category: 'apparel',
+    id: "dad-hat",
+    name: "TGV Dad Hat",
+    price: "$35",
+    image: "/assets/images/merch/dad-hat-black.webp",
+    href: "https://thatgaragevibe.printful.me/product/dad-hat",
   },
   {
-    id: 'tgv-hoodie-001',
-    name: 'Underground Hoodie',
-    description: 'Oversized French terry hoodie. Screen printed back graphic.',
-    price: 8500,
-    sizes: ['S', 'M', 'L', 'XL'],
-    inStock: true,
-    category: 'apparel',
+    id: "sweatshirt",
+    name: "Champion Sweatshirt",
+    price: "$65",
+    image: "assets/images/merch/crewneck-black.webp",
+    href: "https://thatgaragevibe.printful.me/product/mens-champion-sweatshirt",
   },
   {
-    id: 'tgv-cap-001',
-    name: 'Six-Panel Cap',
-    description: 'Unstructured six-panel cap with embroidered wordmark.',
-    price: 3500,
-    inStock: true,
-    category: 'accessories',
+    id: "long-sleeve",
+    name: "Champion Long Sleeve",
+    price: "$45",
+    image: "assets/images/merch/long-sleeve-black.webp",
+    href: "https://thatgaragevibe.printful.me/product/mens-champion-long-sleeve-shirt",
   },
   {
-    id: 'tgv-tape-001',
-    name: 'Vol. 1 Cassette Mixtape',
-    description: 'Curated 60-minute mix from the collective. Limited run of 100.',
-    price: 1200,
-    inStock: false,
-    category: 'music',
+    id: "beanie",
+    name: "Cuffed Beanie",
+    price: "$30",
+    image: "assets/images/merch/cuffed-beanie-black.webp",
+    href: "https://thatgaragevibe.printful.me/product/cuffed-beanie-yupoong-1501kc",
+  },
+  {
+    id: "crop-top",
+    name: "Women’s Crop Top",
+    price: "$40",
+    image: "assets/images/merch/womens-crop-top-black.webp",
+    href: "https://thatgaragevibe.printful.me/product/womens-crop-top-as-colour-4062",
   },
 ];
