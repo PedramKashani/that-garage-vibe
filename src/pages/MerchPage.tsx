@@ -12,15 +12,16 @@ export function MerchPage() {
       </h1>
 
       <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
-        {merchItems.map((item) => (
+        {merchItems.map((item, index) => (
           <article
             key={item.id}
-            className="group w-full max-w-[420px] border border-[#1f1f1f] bg-[#0a0a0a] p-8 transition duration-300 ease-out hover:scale-[1.02]"
+            className="group w-full max-w-[420px] border border-[#1f1f1f] bg-[#0a0a0a] p-8 outline-none transition duration-300 ease-out hover:scale-[1.02] hover:border-white/20 focus-within:border-white/30 focus-within:ring-2 focus-within:ring-white/25"
           >
             <div className="relative aspect-square w-full overflow-hidden bg-neutral-900">
               <img
                 src={item.image}
                 alt={item.name}
+                loading={index === 0 ? 'eager' : 'lazy'}
                 className="h-full w-full object-contain transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-85"
               />
             </div>
@@ -37,7 +38,7 @@ export function MerchPage() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-white px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-white hover:text-black"
+                className="inline-flex items-center justify-center border border-white px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
               >
                 Buy
               </a>

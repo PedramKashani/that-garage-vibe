@@ -11,7 +11,7 @@ export function Footer() {
           <p className="text-sm text-neutral-600">© {year} That Garage Vibe.</p>
           <Link
             to="/tribute"
-            className="text-[10px] tracking-[0.08em] text-neutral-800/80 transition-colors hover:text-neutral-600"
+            className="text-[10px] tracking-[0.08em] text-neutral-600 transition-colors hover:text-neutral-400"
           >
             In memory of Shep
           </Link>

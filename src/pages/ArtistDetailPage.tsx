@@ -65,6 +65,7 @@ export function ArtistDetailPage() {
                 <img
                   src={artist.imageUrl}
                   alt={artist.name}
+                  loading="eager"
                   className="h-[62vh] w-full object-cover object-top sm:h-[70vh] xl:h-[78vh]"
                 />
               </div>

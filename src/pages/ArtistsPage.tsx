@@ -8,9 +8,10 @@ interface ArtistCardProps {
   name: string;
   imageUrl?: string;
   className?: string;
+  loading?: 'eager' | 'lazy';
 }
 
-function ArtistCard({ id, name, imageUrl, className }: ArtistCardProps) {
+function ArtistCard({ id, name, imageUrl, className, loading = 'lazy' }: ArtistCardProps) {
   return (
     <Link
       to={`/artists/${id}`}
@@ -20,6 +21,7 @@ function ArtistCard({ id, name, imageUrl, className }: ArtistCardProps) {
         <img
           src={imageUrl}
           alt={name}
+          loading={loading}
           className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
         />
       )}
@@ -61,6 +63,7 @@ export function ArtistsPage() {
           {/* Row 1: two unequal panels */}
           <ArtistCard
             {...jonathan}
+            loading="eager"
             className="col-span-12 aspect-[3/4] sm:col-span-7 sm:aspect-auto sm:h-[460px] md:h-[580px]"
           />
           <ArtistCard

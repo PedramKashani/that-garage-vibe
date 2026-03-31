@@ -1,11 +1,7 @@
 import {
   SiInstagram,
-  SiThreads,
   SiYoutube,
   SiSoundcloud,
-  SiSpotify,
-  SiBeatport,
-  SiFacebook,
   SiTwitch,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
@@ -47,7 +43,7 @@ const contactItems = [
 export function MediaSection() {
   return (
     <section className="py-14 sm:py-20 md:py-28">
-      <Container className="max-w-none pl-[68px] pr-5 sm:pl-28 sm:pr-8 md:pl-48 md:pr-20">
+      <Container className="max-w-none px-5 sm:px-8 md:px-10 lg:pl-48 lg:pr-20">
         <div className="flex flex-col gap-12 lg:grid lg:grid-cols-[200px_1fr_auto] lg:items-center lg:gap-x-10">
           {/* Left: Brand logo — fixed 200px column so it never blows out the grid */}
           <div>
@@ -55,6 +51,7 @@ export function MediaSection() {
               src="/assets/images/Logo/ThatGarageVibe-LOGO.webp"
               alt="That Garage Vibe"
               className="h-auto max-h-[449px] w-full object-contain object-left"
+              loading="lazy"
             />
           </div>
 

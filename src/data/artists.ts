@@ -12,7 +12,7 @@ import type { Artist } from "../types";
 export const artists: Artist[] = [
   {
     id: "jonathan",
-    name: "Jonathan",
+    name: "Damian Sam",
     genre: "House",
     imageUrl: "/assets/images/artists/jonathan/Jonathan2.webp",
     statement: `Jonathan Sam, known professionally as Damian Sam, was born and raised on the tropical island of Sri Lanka. Inspired by his father, a DJ himself, Damian began learning to mix at just 12 years old and played his first event at 14. Since then, he has been performing nonstop, carving his path as a dynamic force in the music scene.
@@ -55,7 +55,7 @@ He continues to evolve his sound while staying true to the passion that first dr
     // links: { instagram: '', soundcloud: '' },
   },
   {
-    id: "Cazier",
+    id: "cazier",
     name: "Cazier",
     genre: "House",
     imageUrl: "/assets/images/artists/aliya/aliya1.webp",

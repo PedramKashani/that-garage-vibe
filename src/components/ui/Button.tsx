@@ -1,3 +1,4 @@
+import React from 'react';
 import { cn } from '../../lib/utils';
 
 type ButtonVariant = 'primary' | 'outline' | 'ghost';
@@ -25,19 +26,25 @@ export function Button({
   children,
   variant = 'primary',
   size = 'md',
+  asChild = false,
   className,
   ...props
 }: ButtonProps) {
+  const classes = cn(
+    'inline-flex items-center justify-center font-medium uppercase tracking-widest transition-colors duration-150 cursor-pointer',
+    variantStyles[variant],
+    sizeStyles[size],
+    className
+  );
+
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children, {
+      className: cn(classes, (children.props as React.HTMLAttributes<HTMLElement>).className),
+    } as React.HTMLAttributes<HTMLElement>);
+  }
+
   return (
-    <button
-      className={cn(
-        'inline-flex items-center justify-center font-medium uppercase tracking-widest transition-colors duration-150 cursor-pointer',
-        variantStyles[variant],
-        sizeStyles[size],
-        className
-      )}
-      {...props}
-    >
+    <button className={classes} {...props}>
       {children}
     </button>
   );

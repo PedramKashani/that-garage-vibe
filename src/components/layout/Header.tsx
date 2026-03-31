@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
@@ -8,7 +9,6 @@ const navLinks = [
   { to: '/events', label: 'Events' },
   { to: '/artists', label: 'Artists' },
   { to: '/merch', label: 'Merch' },
-  { to: '/partners', label: 'Partners' },
 ];
 
 export function Header() {
@@ -75,29 +75,38 @@ export function Header() {
         </div>
 
         {/* Mobile nav dropdown */}
-        {menuOpen && (
-          <div className="mt-2 rounded-2xl border border-white/[0.07] bg-black/97 px-5 py-5 backdrop-blur-md md:hidden">
-            <nav className="flex flex-col" aria-label="Mobile navigation">
-              {navLinks.map(({ to, label }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  onClick={() => setMenuOpen(false)}
-                  className={({ isActive }) =>
-                    cn(
-                      'rounded-xl px-4 py-3 text-sm uppercase tracking-[0.12em] transition-colors',
-                      isActive
-                        ? 'text-white'
-                        : 'text-neutral-500 hover:text-neutral-300'
-                    )
-                  }
-                >
-                  {label}
-                </NavLink>
-              ))}
-            </nav>
-          </div>
-        )}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              key="mobile-nav"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-2 overflow-hidden rounded-2xl border border-white/[0.07] bg-black/97 px-5 py-5 backdrop-blur-md md:hidden"
+            >
+              <nav className="flex flex-col" aria-label="Mobile navigation">
+                {navLinks.map(({ to, label }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    onClick={() => setMenuOpen(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'rounded-xl px-4 py-3 text-sm uppercase tracking-[0.12em] transition-colors',
+                        isActive
+                          ? 'text-white'
+                          : 'text-neutral-500 hover:text-neutral-300'
+                      )
+                    }
+                  >
+                    {label}
+                  </NavLink>
+                ))}
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
     </header>

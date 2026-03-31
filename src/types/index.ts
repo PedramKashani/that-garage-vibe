@@ -33,10 +33,7 @@ export interface Event {
 export interface MerchItem {
   id: string;
   name: string;
-  description: string;
-  price: number;
-  imageUrl?: string;
-  sizes?: string[];
-  inStock: boolean;
-  category: 'apparel' | 'accessories' | 'music';
+  price: string;
+  image: string;
+  href: string;
 }
