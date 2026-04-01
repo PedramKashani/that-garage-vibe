@@ -43,8 +43,8 @@ He continues to evolve his sound while staying true to the passion that first dr
   },
   {
     id: "josh",
-    name: "Josh",
-    genre: "Drum & Bass",
+    name: "Swain Sam",
+    genre: "House",
     imageUrl: "/assets/images/artists/josh/Josh1.webp",
     links: {
       instagram: "https://www.instagram.com/djswainsam?igsh=NTc4MTIwNjQ2YQ==",
@@ -65,13 +65,13 @@ Her background in music started early, growing up playing multiple instruments, 
 
 Focused on consistency and feel, Cazier is building a sound that stays locked in from start to finish.`,
     links: {
-      instagram: "",
+      instagram: "https://www.instagram.com/djcazier?igsh=NTc4MTIwNjQ2YQ==",
       spotify: "",
     },
   },
   {
     id: "elias",
-    name: "Elias",
+    name: "Elias Mayfield",
     genre: "Industrial",
     imageUrl: "/assets/images/artists/elias/Elias.webp",
     statement: `Elias is an EDM DJ and producer driven by a love for every genre of electronic music, from high-energy soundscapes and dancefloor connection to the psychedelic sounds of psytrance. Blending driving house grooves, euphoric trance melodies, and modern bass elements, he crafts sets that build emotion and move crowds. With jazz being of of his favorite genres he is always aiming to have unique and memorable sets, extending the range of music he plays to bring a different experience every time he’s behind the decks. Elias brings precision mixing and live energy to every show — turning moments into memories and keeping crowds moving from the first beat to the last.`,

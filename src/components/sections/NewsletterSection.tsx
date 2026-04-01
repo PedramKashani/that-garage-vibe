@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
-import { cn } from '../../lib/utils';
-import { Container } from '../ui/Container';
+import { useEffect, useState } from "react";
+import { cn } from "../../lib/utils";
+import { Container } from "../ui/Container";
 
+// Vite inlines these at build time. On Vercel, define VITE_* in project env and redeploy.
 const SENDER_EMBED_SCRIPT_URL =
   import.meta.env.VITE_SENDER_EMBED_SCRIPT_URL ??
-  'https://cdn.sender.net/accounts_resources/universal.js';
+  "https://cdn.sender.net/accounts_resources/universal.js";
 const SENDER_ACCOUNT_ID = import.meta.env.VITE_SENDER_ACCOUNT_ID;
 const SENDER_FORM_ID = import.meta.env.VITE_SENDER_FORM_ID;
 
@@ -22,6 +23,12 @@ export function NewsletterSection() {
   useEffect(() => {
     if (!isConfigured) return;
 
+    if (import.meta.env.DEV && SENDER_FORM_ID && !SENDER_ACCOUNT_ID) {
+      console.warn(
+        "[Newsletter] Sender: add VITE_SENDER_ACCOUNT_ID — sender(accountId) is only invoked when it is set.",
+      );
+    }
+
     let cancelled = false;
     const finish = () => {
       if (!cancelled) setEmbedLoading(false);
@@ -38,15 +45,17 @@ export function NewsletterSection() {
     const scriptSrc = SENDER_EMBED_SCRIPT_URL;
 
     // Match Sender's official snippet pattern.
-    window.Sender = 'sender';
+    window.Sender = "sender";
     if (!window.sender) {
-      window.sender = (function (...args: unknown[]) {
+      window.sender = function (...args: unknown[]) {
         (window.sender!.q = window.sender!.q || []).push(args);
-      } as ((id: string) => void) & { q?: unknown[]; l?: number });
+      } as ((id: string) => void) & { q?: unknown[]; l?: number };
       window.sender.l = Date.now();
     }
 
-    const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${scriptSrc}"]`);
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      `script[src="${scriptSrc}"]`,
+    );
     if (existingScript) {
       if (SENDER_ACCOUNT_ID) {
         window.sender(SENDER_ACCOUNT_ID);
@@ -58,7 +67,7 @@ export function NewsletterSection() {
       };
     }
 
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
     script.src = scriptSrc;
     script.onload = () => {
@@ -92,7 +101,8 @@ export function NewsletterSection() {
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-neutral-500">
-            Get updates on upcoming events, shows we're hitting, merch drops, and new music.
+            Get updates on upcoming events, shows we're hitting, merch drops,
+            and new music.
           </p>
 
           {isConfigured ? (
@@ -102,14 +112,19 @@ export function NewsletterSection() {
               aria-live="polite"
             >
               {SENDER_FORM_ID ? (
-                <div className="sender-form-field" data-sender-form-id={SENDER_FORM_ID} />
+                <div
+                  className="sender-form-field"
+                  data-sender-form-id={SENDER_FORM_ID}
+                />
               ) : (
                 <div id="sender-embed-anchor" className="min-h-10" />
               )}
               <div
                 className={cn(
-                  'absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-lg bg-[#0a0a0a] py-6 transition-opacity duration-300',
-                  embedLoading ? 'z-10 opacity-100' : 'pointer-events-none z-0 opacity-0'
+                  "absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-lg bg-[#0a0a0a] py-6 transition-opacity duration-300",
+                  embedLoading
+                    ? "z-10 opacity-100"
+                    : "pointer-events-none z-0 opacity-0",
                 )}
                 aria-hidden={!embedLoading}
               >
