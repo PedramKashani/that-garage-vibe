@@ -13,13 +13,13 @@ export function HeroSection({
   return (
     <section
       aria-label="Hero"
-      className="-mt-24 relative h-[85vh] w-full overflow-hidden bg-black md:-mt-32 md:h-screen"
+      className="-mt-24 relative h-[min(92vh,820px)] w-full overflow-hidden bg-black md:-mt-32 md:h-screen md:max-h-none"
     >
-      {/* Editorial image — full bleed, covering the viewport */}
+      {/* Editorial image — full photo on small screens (contain); full-bleed crop on md+ */}
       <img
         src={imageSrc}
         alt={imageAlt}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-contain object-center md:object-cover"
         loading="eager"
         fetchPriority="high"
       />
