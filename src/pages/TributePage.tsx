@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { Section } from '../components/ui/Section';
+import { Link } from "react-router-dom";
+import { Section } from "../components/ui/Section";
 
 export function TributePage() {
   return (
@@ -17,12 +17,12 @@ export function TributePage() {
           <p>Forever part of the Garage Vibe family.</p>
 
           <p>
-            Shep wasn't just someone who showed up — he was someone who showed
+            Shep wasn't just someone who showed up - he was someone who showed
             love. Every time. To everyone. He was there when you needed him.
           </p>
 
           <p>
-            He had a rare kind of energy — the kind that made people feel seen,
+            He had a rare kind of energy - the kind that made people feel seen,
             supported, and celebrated. Whether you were behind the decks or just
             stepping into the scene, Shep made sure you knew you mattered.
           </p>
@@ -30,7 +30,7 @@ export function TributePage() {
           <p>He believed in people deeply, and he wasn't quiet about it.</p>
 
           <p className="italic text-neutral-300">
-            "I'm your number one fan — I'll always be front and center at your
+            "I'm your number one fan - I'll always be front and center at your
             sets."
           </p>
 
@@ -39,10 +39,10 @@ export function TributePage() {
             dream before it even felt real.
           </p>
 
-          <p>To many, he was a friend. To us, he was family — a brother.</p>
+          <p>To many, he was a friend. To us, he was family - a brother.</p>
 
           <p>
-            Shep was part of the heartbeat of Garage Vibe — the energy, the
+            Shep was part of the heartbeat of Garage Vibe - the energy, the
             community, the love on the dance floor. That doesn't fade.
           </p>
 

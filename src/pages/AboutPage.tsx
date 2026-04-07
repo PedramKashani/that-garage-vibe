@@ -5,7 +5,6 @@ export function AboutPage() {
   return (
     <Section>
       <div className="mx-auto max-w-[700px]">
-
         {/* Header */}
         <p className="mb-4 text-xs uppercase tracking-[0.3em] text-neutral-600">
           About
@@ -34,10 +33,10 @@ export function AboutPage() {
           </p>
           <div className="space-y-6 text-lg leading-relaxed text-neutral-400">
             <p>
-              It was 2021. The world had just been through something no one
-              was prepared for. Longtime friends Justin Shepard (Shep) and
-              Damian Sam looked at an ordinary garage and saw something else —
-              a sanctuary. A place to move, to feel, to reconnect.
+              It was 2021. The world had just been through something no one was
+              prepared for. Longtime friends Justin Shepard (Shep) and Damian
+              Sam looked at an ordinary garage and saw something else - a
+              sanctuary. A place to move, to feel, to reconnect.
             </p>
             <p>
               At a time when the world felt distant, they opened their doors.
@@ -46,7 +45,7 @@ export function AboutPage() {
             </p>
             <p>
               Those early nights had a specific kind of energy. Raw. Honest.
-              Underground. The kind you don't engineer — you earn it.
+              Underground. The kind you don't engineer - you earn it.
             </p>
           </div>
         </div>
@@ -64,13 +63,11 @@ export function AboutPage() {
           <div className="space-y-6 text-lg leading-relaxed text-neutral-400">
             <p>
               Inspired by those early nights, Shep and Damian built something
-              larger — That Garage Vibe Collective. A network of passionate
+              larger - That Garage Vibe Collective. A network of passionate
               creatives, DJs, and event producers dedicated to curating
               experiences that matter.
             </p>
-            <p>
-              Not just events. Moments. The kind people talk about after.
-            </p>
+            <p>Not just events. Moments. The kind people talk about after.</p>
           </div>
         </div>
 
@@ -83,11 +80,10 @@ export function AboutPage() {
           </p>
           <div className="space-y-6 text-lg leading-relaxed text-neutral-400">
             <p>
-              From Los Angeles to Las Vegas to Salt Lake City — That Garage
-              Vibe has grown beyond its four walls. But the essence hasn't
-              moved. Every event still carries that same underground spirit.
-              That same welcoming energy. That same refusal to compromise on
-              how it feels.
+              From Los Angeles to Las Vegas to Salt Lake City - That Garage Vibe
+              has grown beyond its four walls. But the essence hasn't moved.
+              Every event still carries that same underground spirit. That same
+              welcoming energy. That same refusal to compromise on how it feels.
             </p>
           </div>
         </div>
@@ -125,10 +121,9 @@ export function AboutPage() {
             In Memoriam
           </p>
           <p className="text-sm text-neutral-500 group-hover:text-neutral-300 transition-colors">
-            In memory of Shep — forever part of The Garage Vibe.
+            In memory of Shep - forever part of The Garage Vibe.
           </p>
         </Link>
-
       </div>
     </Section>
   );
