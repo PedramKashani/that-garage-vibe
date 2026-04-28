@@ -1,6 +1,8 @@
 import type { Event } from "../types";
 
-export const upcomingEvents: Event[] = [
+export const upcomingEvents: Event[] = [];
+
+export const pastEvents: Event[] = [
   {
     id: "tgv-004",
     title: "GUZ",
@@ -18,9 +20,6 @@ export const upcomingEvents: Event[] = [
     ticketUrl: "https://posh.vip/e/guz-1",
     isSoldOut: false,
   },
-];
-
-export const pastEvents: Event[] = [
   {
     id: "the-garage-sessions-003",
     title: "The Garage Sessions",
