@@ -62,17 +62,30 @@ export function EventsPage() {
           Upcoming
         </p>
 
-        {upcomingEvents.length > 0 ? (
-          <div className="divide-y divide-[#1f1f1f]">
-            {upcomingEvents.map((event) => (
-              <EventRow key={event.id} event={event} />
-            ))}
+        <div className="lg:flex lg:items-start lg:gap-10">
+          <div className="w-full lg:flex-1">
+            {upcomingEvents.length > 0 ? (
+              <div className="divide-y divide-[#1f1f1f]">
+                {upcomingEvents.map((event) => (
+                  <EventRow key={event.id} event={event} />
+                ))}
+              </div>
+            ) : (
+              <p className="py-8 text-sm text-neutral-700">
+                No upcoming dates at this time.
+              </p>
+            )}
           </div>
-        ) : (
-          <p className="py-8 text-sm text-neutral-700">
-            No upcoming dates at this time.
-          </p>
-        )}
+
+          <div className="mt-8 w-full shrink-0 lg:mt-0 lg:w-[360px]">
+            <img
+              src="/assets/images/events/upcoming-event-flyers/sebastian.webp"
+              alt="Upcoming event flyer"
+              loading="lazy"
+              className="h-auto w-full rounded-2xl border border-neutral-800 bg-neutral-950"
+            />
+          </div>
+        </div>
 
         {/* Stay updated nudge */}
         <p className="mt-10 text-xs uppercase tracking-[0.25em] text-neutral-700">

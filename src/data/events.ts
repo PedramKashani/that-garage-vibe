@@ -1,6 +1,22 @@
 import type { Event } from "../types";
 
-export const upcomingEvents: Event[] = [];
+export const upcomingEvents: Event[] = [
+  {
+    id: "tgv-005",
+    title: "SEBASTIAN LEDHER",
+    date: "2026-06-19",
+    venue: "115 N 7th Street",
+    city: "Las Vegas, NV",
+    artists: [
+      "Sebastian Ledher",
+      "Khalon",
+      "Damian Sam",
+      "Malone Wright x Cazier",
+    ],
+    ticketUrl: "https://posh.vip/e/sebastian-ledher",
+    isSoldOut: false,
+  },
+];
 
 export const pastEvents: Event[] = [
   {
