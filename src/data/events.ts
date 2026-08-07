@@ -2,6 +2,22 @@ import type { Event } from "../types";
 
 export const upcomingEvents: Event[] = [
   {
+    id: "tgv-006",
+    title: "ROOFTOP POOL PARTY",
+    date: "2026-09-12",
+    venue: "Golden Hour, Level 8",
+    city: "Los Angeles, CA",
+    artists: [
+      "The Garage Vibe Collective",
+    ],
+    ticketUrl: "https://posh.vip/e/minow-golden-hour-rooftop-pool-party?u=aliyacazier141&_t=msi82rl3&os=web&src=event_page",
+    isSoldOut: false,
+  },
+  
+];
+
+export const pastEvents: Event[] = [
+  {
     id: "tgv-005",
     title: "SEBASTIAN LEDHER",
     date: "2026-06-19",
@@ -16,9 +32,6 @@ export const upcomingEvents: Event[] = [
     ticketUrl: "https://posh.vip/e/sebastian-ledher",
     isSoldOut: false,
   },
-];
-
-export const pastEvents: Event[] = [
   {
     id: "tgv-004",
     title: "GUZ",
