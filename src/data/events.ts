@@ -5,7 +5,7 @@ export const upcomingEvents: Event[] = [
   id: "tgv-006",
   title: "That Garage Vibe @ GOLDEN HOUR, (ROOFTOP POOL PARTY)",
   date: "2026-09-12",
-  venue: "Golden Hour, Level 8",
+  venue: "Golden\u00A0Hour, Level 8",
   city: "Los Angeles, CA",
   artists: [
   "Khalon",
