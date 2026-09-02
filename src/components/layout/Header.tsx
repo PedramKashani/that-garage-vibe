@@ -56,7 +56,7 @@ export function Header() {
           {/* Right: Location mark — desktop only */}
           <div className="hidden shrink-0 flex-col items-end gap-1 md:flex">
             <span className="text-xs uppercase leading-none tracking-[0.2em] text-neutral-600">
-              Los Angeles / Las Vegas / Utah
+              Los Angeles / Las Vegas
             </span>
             <span className="text-[11px] uppercase leading-none tracking-[0.25em] text-neutral-700">
               Est. 2021
