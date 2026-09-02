@@ -79,7 +79,7 @@ export function EventsPage() {
 
           <div className="mt-8 w-full shrink-0 lg:mt-0 lg:w-[360px]">
             <img
-src="/assets/images/events/upcoming-event-flyers/Rooftop-Pool-Party-Final.png"              alt=
+src="/assets/images/events/upcoming-event-flyers/rooftop-pool-party-final.png"              alt=
 "Upcoming event flyer"
               loading="lazy"
               className="h-auto w-full rounded-2xl border border-neutral-800 bg-neutral-950"

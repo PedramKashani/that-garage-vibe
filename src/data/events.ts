@@ -3,14 +3,18 @@ import type { Event } from "../types";
 export const upcomingEvents: Event[] = [
   {
   id: "tgv-006",
-  title: "MINOW @ GOLDEN HOUR, (ROOFTOP POOL PARTY)",
+  title: "That Garage Vibe @ GOLDEN HOUR, (ROOFTOP POOL PARTY)",
   date: "2026-09-12",
   venue: "Golden Hour, Level 8",
   city: "Los Angeles, CA",
   artists: [
-    "MINOW",
-    "Supported by The Garage Vibe Collective",
-  ],
+  "Khalon",
+  "Damian Sam",
+  "Cazier",
+  "Ali Arefi",
+  "Swain Sam",
+  "Malone Wright",
+],
   ticketUrl: "https://posh.vip/e/minow-golden-hour-rooftop-pool-party?u=aliyacazier141&_t=msi82rl3&os=web&src=event_page",
   isSoldOut: false,
 },
