@@ -29,16 +29,18 @@ Known for his distinct sound, seamless energy, and deep connection with his audi
     },
   },
   {
-    id: "malone",
-    name: "Malone Wright",
+    id: "cazier",
+    name: "Cazier",
     genre: "House",
-    imageUrl: "/assets/images/artists/malone/Malone2.webp",
-    statement: `Malone Wright is a Utah-based DJ and producer. With roots in the scene dating back to 2016, his sound blends deep emotion with driving rhythms, creating immersive sets that resonate long after the music fades. Inspired by a deep love for electronic music, Malone crafts journeys that move seamlessly between melodic atmospheres and powerful, late-night energy.
-He continues to evolve his sound while staying true to the passion that first drew him to EDM. Whether behind the decks or in the studio, his focus remains the same: to connect, elevate, and keeping the vibes right.`,
+    imageUrl: "/assets/images/artists/aliya/aliya1.webp",
+    statement: `Cazier is a deep and tech house DJ with a focus on groove and late-night energy.
+
+Her background in music started early, growing up playing multiple instruments, which shaped the way she approaches sound today. Keeping things minimal and steady, her sets lean into the underground—built for rooms where the music speaks for itself.
+
+Focused on consistency and feel, Cazier is building a sound that stays locked in from start to finish.`,
     links: {
-      instagram: "https://www.instagram.com/malone_wr1ght/",
-      soundcloud: "https://soundcloud.com/malonewright",
-      facebook: "https://www.facebook.com/malone.wright/",
+      instagram: "https://www.instagram.com/djcazier?igsh=NTc4MTIwNjQ2YQ==",
+      spotify: "",
     },
   },
   {
@@ -55,18 +57,16 @@ He continues to evolve his sound while staying true to the passion that first dr
     // links: { instagram: '', soundcloud: '' },
   },
   {
-    id: "cazier",
-    name: "Cazier",
+    id: "malone",
+    name: "Malone Wright",
     genre: "House",
-    imageUrl: "/assets/images/artists/aliya/aliya1.webp",
-    statement: `Cazier is a deep and tech house DJ with a focus on groove and late-night energy.
-
-Her background in music started early, growing up playing multiple instruments, which shaped the way she approaches sound today. Keeping things minimal and steady, her sets lean into the underground—built for rooms where the music speaks for itself.
-
-Focused on consistency and feel, Cazier is building a sound that stays locked in from start to finish.`,
+    imageUrl: "/assets/images/artists/malone/Malone2.webp",
+    statement: `Malone Wright is a Utah-based DJ and producer. With roots in the scene dating back to 2016, his sound blends deep emotion with driving rhythms, creating immersive sets that resonate long after the music fades. Inspired by a deep love for electronic music, Malone crafts journeys that move seamlessly between melodic atmospheres and powerful, late-night energy.
+He continues to evolve his sound while staying true to the passion that first drew him to EDM. Whether behind the decks or in the studio, his focus remains the same: to connect, elevate, and keeping the vibes right.`,
     links: {
-      instagram: "https://www.instagram.com/djcazier?igsh=NTc4MTIwNjQ2YQ==",
-      spotify: "",
+      instagram: "https://www.instagram.com/malone_wr1ght/",
+      soundcloud: "https://soundcloud.com/malonewright",
+      facebook: "https://www.facebook.com/malone.wright/",
     },
   },
   {
@@ -74,7 +74,7 @@ Focused on consistency and feel, Cazier is building a sound that stays locked in
     name: "Elias Mayfield",
     genre: "Industrial",
     imageUrl: "/assets/images/artists/elias/Elias.webp",
-    statement: `Elias is an EDM DJ and producer driven by a love for every genre of electronic music, from high-energy soundscapes and dancefloor connection to the psychedelic sounds of psytrance. Blending driving house grooves, euphoric trance melodies, and modern bass elements, he crafts sets that build emotion and move crowds. With jazz being of of his favorite genres he is always aiming to have unique and memorable sets, extending the range of music he plays to bring a different experience every time he’s behind the decks. Elias brings precision mixing and live energy to every show — turning moments into memories and keeping crowds moving from the first beat to the last.`,
+    statement: `Elias is an EDM DJ and producer driven by a love for every genre of electronic music, from high-energy soundscapes and dancefloor connection to the psychedelic sounds of psytrance. Blending driving house grooves, euphoric trance melodies, and modern bass elements, he crafts sets that build emotion and move crowds. With jazz being of of his favorite genres he is always aiming to have unique and memorable sets, extending the range of music he plays to bring a different experience every time he's behind the decks. Elias brings precision mixing and live energy to every show — turning moments into memories and keeping crowds moving from the first beat to the last.`,
     links: {
       instagram:
         "https://www.instagram.com/badatbigguitar?igsh=NTc4MTIwNjQ2YQ==",
