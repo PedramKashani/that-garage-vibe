@@ -82,9 +82,9 @@ export function ArtistDetailPage() {
             </h1>
 
             <div className="mb-10 grid grid-cols-1 gap-6 border-y border-neutral-900 py-6 sm:grid-cols-2">
-              <MetaItem label="Collective" value="That Garage Vibe" />
-              <MetaItem label="Status" value="Sound Undisclosed" />
-            </div>
+  <MetaItem label="Collective" value="That Garage Vibe" />
+  {artist.genre && <MetaItem label="Genre" value={artist.genre} />}
+</div>
 
             {artist.statement && (
               <div className="mb-10 max-w-[44ch] space-y-6 text-base leading-relaxed text-neutral-300">
