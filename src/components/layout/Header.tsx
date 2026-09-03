@@ -55,13 +55,13 @@ export function Header() {
 
           {/* Right: Location mark — desktop only */}
           <div className="hidden shrink-0 flex-col items-end gap-1 md:flex">
-            <span className="text-xs uppercase leading-none tracking-[0.2em] text-neutral-600">
-              Los Angeles / Las Vegas
-            </span>
-            <span className="text-[11px] uppercase leading-none tracking-[0.25em] text-neutral-700">
-              Est. 2021
-            </span>
-          </div>
+  <span className="text-[10px] uppercase leading-none tracking-[0.1em] text-neutral-600">
+    Los Angeles / Las Vegas
+  </span>
+  <span className="text-[9px] uppercase leading-none tracking-[0.15em] text-neutral-700">
+    Est. 2021
+  </span>
+</div>
 
           {/* Right: Hamburger — mobile only */}
           <button
