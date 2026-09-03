@@ -13,7 +13,7 @@ export const artists: Artist[] = [
   {
     id: "jonathan",
     name: "Damian Sam",
-    genre: "House",
+    genre: "Tech House / House / Technno",
     imageUrl: "/assets/images/artists/jonathan/Jonathan3.webp",
     statement: `Jonathan Sam, known professionally as Damian Sam, was born and raised on the tropical island of Sri Lanka. Inspired by his father, a DJ himself, Damian began learning to mix at just 12 years old and played his first event at 14. Since then, he has been performing nonstop, carving his path as a dynamic force in the music scene.
 
@@ -31,7 +31,7 @@ Known for his distinct sound, seamless energy, and deep connection with his audi
   {
     id: "cazier",
     name: "Cazier",
-    genre: "House",
+    genre: "Tech House / House / Techno",
     imageUrl: "/assets/images/artists/aliya/aliya1.webp",
     statement: `Cazier is a deep and tech house DJ with a focus on groove and late-night energy.
 
@@ -43,23 +43,23 @@ Focused on consistency and feel, Cazier is building a sound that stays locked in
       spotify: "",
     },
   },
-  {
-    id: "josh",
-    name: "Swain Sam",
-    genre: "House",
-    imageUrl: "/assets/images/artists/josh/Josh1.webp",
-    links: {
-      instagram: "https://www.instagram.com/djswainsam?igsh=NTc4MTIwNjQ2YQ==",
-      soundcloud: "",
-    },
-    // bio: '',
-    // statement: '',
-    // links: { instagram: '', soundcloud: '' },
+ {
+  id: "josh",
+  name: "Swain Sam",
+  genre: "Tech House / Techno / Bass House",
+  imageUrl: "/assets/images/artists/josh/Josh1.webp",
+  statement: `Swain Sam is a Los Angeles- and Las Vegas-based DJ with nearly 20 years behind the decks, specializing in techno, tech house, bass house, and underground electronic music. DJing since the age of 12, he has built a reputation for reading the crowd and delivering high-energy sets that keep dance floors moving from start to finish.
+
+Whether playing intimate after-hours events or packed clubs, Swain Sam creates experiences driven by rhythm, connection, and passion. Known for dancing alongside the crowd from behind the decks, his infectious energy turns every performance into a shared celebration. His goal is simple: leave every audience energized, connected, and excited for the next set.`,
+  links: {
+    instagram: "https://www.instagram.com/djswainsam?igsh=NTc4MTIwNjQ2YQ==",
+    soundcloud: "https://soundcloud.com/swainsammusic",
   },
+},
   {
     id: "malone",
     name: "Malone Wright",
-    genre: "House",
+    genre: "Melodic / Techno",
     imageUrl: "/assets/images/artists/malone/Malone2.webp",
     statement: `Malone Wright is a Utah-based DJ and producer. With roots in the scene dating back to 2016, his sound blends deep emotion with driving rhythms, creating immersive sets that resonate long after the music fades. Inspired by a deep love for electronic music, Malone crafts journeys that move seamlessly between melodic atmospheres and powerful, late-night energy.
 He continues to evolve his sound while staying true to the passion that first drew him to EDM. Whether behind the decks or in the studio, his focus remains the same: to connect, elevate, and keeping the vibes right.`,
