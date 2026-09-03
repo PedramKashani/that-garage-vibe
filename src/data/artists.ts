@@ -13,15 +13,15 @@ export const artists: Artist[] = [
   {
     id: "jonathan",
     name: "Damian Sam",
-    genre: "Tech House / House / Technno",
+    genre: "Tech House / House / Techno",
     imageUrl: "/assets/images/artists/jonathan/Jonathan3.webp",
-    statement: `Jonathan Sam, known professionally as Damian Sam, was born and raised on the tropical island of Sri Lanka. Inspired by his father, a DJ himself, Damian began learning to mix at just 12 years old and played his first event at 14. Since then, he has been performing nonstop, carving his path as a dynamic force in the music scene.
+    statement: `Jonathan Sam, known professionally as Damian Sam, was born and raised in Sri Lanka. Inspired by his father, a DJ himself, Damian began mixing at just 12 years old and played his first event at 14, beginning a journey that has now spanned nearly two decades behind the decks.
 
-After moving to Los Angeles, California, Damian redirected his focus toward house music, quickly making a name for himself across the West Coast. From California to Nevada, he has performed at renowned venues such as Exchange LA, Avalon Hollywood, Academy, Lick n Dip, EGO After Hours Las Vegas, and Pattern Bar, and has shared the stage with talents like Sage Armstrong.
+After moving to Los Angeles, Damian turned his focus toward house music and quickly established himself within the West Coast underground scene. He has performed at venues including Exchange LA, Avalon Hollywood, Academy LA, Bauhaus Las Vegas, Lick N Dip, EGO After Hours Las Vegas, and Pattern Bar, while sharing lineups and providing support for GUZ, Sebastian Ledher, Tokyo T, and Sage Armstrong.
 
-Beyond the decks, Damian is also deeply involved in the industry, taking on A&R work with Tech Avenue Records, one of Los Angeles' fastest-growing labels. As co-founder of The Garage Vibe, Damian has been instrumental in transforming a grassroots garage party into a growing movement, curating unforgettable events across LA, Las Vegas, and Salt Lake City.
+Beyond performing, Damian works in A&R with Tech Avenue Records and is a co-founder of The Garage Vibe, helping grow the collective from a grassroots garage party into a growing house music movement with events across Los Angeles, Las Vegas, and Salt Lake City.
 
-Known for his distinct sound, seamless energy, and deep connection with his audience, Damian Sam is on a steady rise, continuously pushing boundaries, building community, and leaving a lasting mark on the house music scene.`,
+Driven by groove, energy, and a strong connection with the dance floor, Damian continues to build his presence as both a DJ and curator within the underground house music scene.`,
     links: {
       instagram: "https://www.instagram.com/djdamiansam/",
       soundcloud: "https://soundcloud.com/djdamiansam",
