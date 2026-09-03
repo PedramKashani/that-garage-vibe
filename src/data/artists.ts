@@ -14,7 +14,7 @@ export const artists: Artist[] = [
     id: "jonathan",
     name: "Damian Sam",
     genre: "House",
-    imageUrl: "/assets/images/artists/jonathan/Jonathan2.webp",
+    imageUrl: "/assets/images/artists/jonathan/Jonathan3.webp",
     statement: `Jonathan Sam, known professionally as Damian Sam, was born and raised on the tropical island of Sri Lanka. Inspired by his father, a DJ himself, Damian began learning to mix at just 12 years old and played his first event at 14. Since then, he has been performing nonstop, carving his path as a dynamic force in the music scene.
 
 After moving to Los Angeles, California, Damian redirected his focus toward house music, quickly making a name for himself across the West Coast. From California to Nevada, he has performed at renowned venues such as Exchange LA, Avalon Hollywood, Academy, Lick n Dip, EGO After Hours Las Vegas, and Pattern Bar, and has shared the stage with talents like Sage Armstrong.
