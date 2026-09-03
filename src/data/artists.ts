@@ -40,7 +40,7 @@ Her background in music started early, growing up playing multiple instruments, 
 Focused on consistency and feel, Cazier is building a sound that stays locked in from start to finish.`,
     links: {
       instagram: "https://www.instagram.com/djcazier?igsh=NTc4MTIwNjQ2YQ==",
-      spotify: "",
+      soundcloud: "https://soundcloud.com/aliya-sam-221167637",
     },
   },
  {
